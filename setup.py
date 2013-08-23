@@ -48,7 +48,7 @@ setup(
     keywords='django, time-out, maintenance mode',
     author='Glyn Jackson',
     author_email='me.org',
-    url="https://git.com:sparky300/django-time-out",
+    url="https://github.com/sparky300/django-time-out",
     packages=find_packages(),
     include_package_data=True,
     install_requires=[

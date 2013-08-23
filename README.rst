@@ -1,10 +1,12 @@
+
+======================
 Django Time Out
-============
+======================
 
 A reusable Django application that allows you to put your Django site into maintenance mode.
 
 Installation
-------------
+============
 
 To get the latest stable release from PyPi
 
