@@ -5,6 +5,8 @@ Django Time Out
 
 A reusable Django application that allows you to put your Django site into maintenance mode.
 
+Users logged in to /admin are excluded.
+
 Installation
 ============
 
@@ -45,18 +47,19 @@ Don't forget to migrate your database
     ./manage.py migrate time_out
 
 
-
 Usage
 -----
 
 This application simply runs middleware that checks to see if the site is down for
 maintenance based on scheduled maintenance dates/times.
 
+Note: Time Out uses process_request with one database trip, means there will be a small performance hit on every request.
+
 
 Contribute
 ----------
 
-If you want to contribute to this project, please perform the following steps
+If you want to contribute to this project, please perform the following steps...
 
 .. code-block:: bash
 
