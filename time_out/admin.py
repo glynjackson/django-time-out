@@ -1,11 +1,19 @@
 """Admin classes for the time_out app."""
-# from django.contrib import admin
 
-# from . import models
+# Django/Python imports.
+from django.contrib import admin
+
+# App imports
+from .models import MaintenanceSchedule
 
 
-# class YourModelAdmin(admin.ModelAdmin):
-#    list_display = ['some', 'fields', ]
-#    search_fields = ['some', 'fieds', ]
+class MaintenanceScheduleAdmin(admin.ModelAdmin):
+    """
+    Attributes admin overrides.
+    """
+    list_display = ['start_time', 'end_time', 'active']
+    search_fields = ['start_time', 'end_time', 'description']
+    sortable_field_name = "start_time"
 
-# admin.site.register(models.YourModel, YourModelAdmin)
+
+admin.site.register(MaintenanceSchedule, MaintenanceScheduleAdmin)

@@ -1,9 +1,11 @@
 *.egg-info/
 *.pyc
+*.idea
 *coverage/
-/django-env
+django-env/
 db.sqlite
 dist/
 docs/_build/
 app_media/
 app_static/
+build/
