@@ -1,7 +1,7 @@
 Django Time Out
 ============
 
-A reusable Django that allows you to put your Django site into maintenance mode.
+A reusable Django application that allows you to put your Django site into maintenance mode.
 
 Installation
 ------------
@@ -18,7 +18,6 @@ To get the latest commit from GitHub
 
     $ pip install -e git+git://git.com:sparky300/django-time-out.git#egg=time_out
 
-TODO: Describe further installation steps (edit / remove the examples below):
 
 Add ``time_out`` to your ``INSTALLED_APPS``
 
@@ -29,14 +28,13 @@ Add ``time_out`` to your ``INSTALLED_APPS``
         'time_out',
     )
 
-Add the ``time_out`` URLs to your ``urls.py``
+Add down_time middleware class to your settings.
 
 .. code-block:: python
 
-    urlpatterns = patterns('',
-        ...
-        url(r'^app-url/', include('time_out.urls')),
-    )
+    'time_out.middleware.DownTimeMiddleware',
+
+
 
 Don't forget to migrate your database
 
@@ -45,11 +43,12 @@ Don't forget to migrate your database
     ./manage.py migrate time_out
 
 
+
 Usage
 -----
 
-TODO: Describe usage or point to docs. Also describe available settings and
-templatetags.
+This application simply runs middleware that checks to see if the site is down for
+maintenance based on scheduled maintenance dates/times.
 
 
 Contribute
