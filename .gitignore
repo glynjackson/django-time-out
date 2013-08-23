@@ -1,6 +1,7 @@
 *.egg-info/
 *.pyc
 *coverage/
+/django-env
 db.sqlite
 dist/
 docs/_build/
